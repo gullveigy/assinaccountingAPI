@@ -1,7 +1,8 @@
-let Expenditure = require('../models/expenditures');
-let express = require('express');
+import Expenditure from '../models/expenditures';
+import express from 'express';
 let router = express.Router();
 let mongoose = require('mongoose');
+
 
 
 var mongodbUri ='mongodb://expendituredb:expendituredb777@ds221271.mlab.com:21271/gullin';

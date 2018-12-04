@@ -1,13 +1,24 @@
-let chai = require('chai');
-let chaiHttp = require('chai-http');
-let server = require('../../bin/www');
+import chai from 'chai';
+import chaiHttp from 'chai-http' ;
+//import server from '../../bin/www';
+var server = null ;
 let expect = chai.expect;
-chai.use(require('chai-things'));
+import _ from 'lodash';
+import things from 'chai-things'
+chai.use( things);
 chai.use(chaiHttp);
-let _ = require('lodash' );
 
 describe('Expenditures', function (){
     // TODO
+    before(function(){
+        delete require.cache[require.resolve('../../bin/www')];
+        delete require.cache[require.resolve('../../models/expenditures')];
+        //datastore = require('../../models/donations');
+        server = require('../../bin/www');
+    });
+    after(function (done) {
+        server.close(done);
+    });
      describe('POST /expenditures', function () {
         it('should return confirmation message and update database', function(done) {
             let expenditure = {
