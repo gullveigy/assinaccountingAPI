@@ -9,6 +9,8 @@
     "clean": "rimraf ./lib && mkdir lib",
     "server:watch": "cross-env NODE_ENV=dev nodemon --exec babel-node bin/www",
     "test:watch": "npm run test -- --watch",
+    "lint": "esw  ./test ./routes ./models/ app.js",
+    "lint:watch": "npm run lint -- --watch",
     "postbuild": "npm run server",
     "prebuild": "npm-run-all test clean",
     "build": "babel ./ --out-dir lib/ --ignore ./node_modules,./.babelrc,./package.json,./package-lock.json,./test --copy-files"
