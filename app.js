@@ -31,8 +31,8 @@ app.use('/users', usersRouter);
 
 app.get('/users/:email', users.findOnebyEmail);                   //yes      no
 app.get('/users', users.findAllusers);    //test                                //yes
-app.get('/users/specificex/:username', users.findallexpenditures);//test    //yes      no
-app.get('/users/specificin/:username', users.findallincomes);//test         //yes      no
+app.get('/users/specificex/:email', users.findallexpenditures);//test    //yes      no
+app.get('/users/specificin/:email', users.findallincomes);//test         //yes      no
 
 
 
