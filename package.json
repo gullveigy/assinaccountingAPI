@@ -3,8 +3,8 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "test": "npm-run-all test_expenditure test_income test_users",
-    "test_expenditure": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/expenditure-test.js",
+    "test": "npm-run-all test_income test_users",
+    //"test_expenditure": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/expenditure-test.js",
     "test_income": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/income-test.js",
     "test_users": "cross-env NODE_ENV=test mocha --compilers js:babel-core/register test/routes/users-test.js",
     "server": "cross-env NODE_ENV=dev PORT=3001 node lib/bin/www",
