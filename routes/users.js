@@ -136,7 +136,7 @@ router.deleteUserByEmail = (req, res) => {                                      
 
 
 
-//after login
+/*//after login
 router.findallexpenditures = (req, res) => {                                                          //if login sucessfully                 get
     // Return a JSON representation of our list
     res.setHeader('Content-Type', 'application/json');
@@ -168,6 +168,7 @@ router.findallincomes = (req, res) => {                                         
             res.send(JSON.stringify(incomes,null,5));
     });
 }
+*/
 
 
 

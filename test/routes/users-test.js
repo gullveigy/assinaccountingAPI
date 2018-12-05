@@ -138,23 +138,23 @@ describe('Users', function (){
 
 
 
-
- /*   describe('GET /users/specificex/:username',  () => {
+/*
+    describe('GET /users/specificex/:email',  () => {
         it('should return all the expenditure records of one user in an array', function(done) {
             chai.request(server)
-                .get('/users/specificex/charlotte')
+                .get('/users/specificex/1804094745@qq.com')
                 .end(function(err, res) {
                     expect(res).to.have.status(200);
                     expect(res.body).to.be.a('array');
-                    expect(res.body.length).to.equal(4);
+                    expect(res.body.length).to.equal(2);
                     let result = _.map(res.body, (expenditure) => {
-                        return { description: expenditure.description,
+                        return { message: expenditure.message,
                                   amount: expenditure.amount }
                     });
-                    expect(result).to.include( { description: 'eye shadow', amount: 16  } );
-                    expect(result).to.include( { description: "nyx pencil", amount: 9.99  } );
-                    expect(result).to.include( { description: "haribo", amount: 6  } );
-                    expect(result).to.include( { description: "sunscreen cream", amount: 13  } );
+                    expect(result).to.include( { message: 'cup', amount: 2.95  } );
+                    expect(result).to.include( { message: "JJ.Bus", amount: 3  } );
+                    //expect(result).to.include( { description: "haribo", amount: 6  } );
+                    //expect(result).to.include( { description: "sunscreen cream", amount: 13  } );
                     done();
                 });
 
@@ -207,6 +207,6 @@ describe('Users', function (){
         });
 
     });
-*/
 
+*/
 });
